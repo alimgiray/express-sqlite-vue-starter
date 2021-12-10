@@ -21,7 +21,7 @@ async function register(username, password, email) {
       throw new errors.AppError(
         errors.errorTypes.NOT_VALID,
         400,
-        "Username / Email already exists",
+        "Username or email already exists",
         true
       );
     } else {
@@ -39,7 +39,7 @@ async function login(email, password) {
   throw new errors.AppError(
     errors.errorTypes.NOT_AUTHORIZED,
     401,
-    "Email / password didn't match",
+    "Invalid email or password",
     true
   );
 }
